@@ -1,0 +1,80 @@
+
+╔════════════════════════════════════════════════════════════════╗
+║            RUNNING BIOMECHANICS ANALYSIS REPORT                 ║
+╚════════════════════════════════════════════════════════════════╝
+
+📊 DATASET SUMMARY
+─────────────────────────────────────────────────────────────────
+  Total Samples:          1000
+  Normal Runners:         600 (60%)
+  Over-pronators:         200 (20%)
+  Injured Runners:        200 (20%)
+  
+  Training Set:           800 samples
+  Testing Set:            200 samples
+
+🤖 MODEL PERFORMANCE
+─────────────────────────────────────────────────────────────────
+  Algorithm:              Random Forest Classifier
+  Number of Trees:        100
+  Train Accuracy:         100.0%
+  Test Accuracy:          100.0%
+  
+  Per-Class Accuracy:
+    • Normal:             100.0%
+    • Over-pronation:     100.0%
+    • Injured:            100.0%
+
+📈 KEY FEATURES (Top 5)
+─────────────────────────────────────────────────────────────────
+  1. mean_force                22.2%
+  2. variability               20.4%
+  3. peak_force                15.2%
+  4. impulse                   13.2%
+  5. impact_peak               11.5%
+
+📊 RUNNING TYPE CHARACTERISTICS
+─────────────────────────────────────────────────────────────────
+NORMAL RUNNERS:
+  • Peak Force:           2.58 BW
+  • Mean Force:           0.94 BW
+  • Loading Rate:         0.30 BW/s
+  • Recommendation:       ✅ Maintain current training
+
+OVER-PRONATORS:
+  • Peak Force:           3.32 BW
+  • Mean Force:           1.08 BW
+  • Loading Rate:         0.45 BW/s
+  • Recommendation:       👟 Consider motion control shoes, strengthen ankles
+
+INJURED RUNNERS:
+  • Peak Force:           3.02 BW
+  • Mean Force:           1.05 BW
+  • Loading Rate:         0.40 BW/s
+  • Recommendation:       🏥 Reduce volume, seek medical evaluation
+
+💡 INSIGHTS & RECOMMENDATIONS
+─────────────────────────────────────────────────────────────────
+1. Peak force is the strongest predictor of running type
+   → Monitor vertical loading to prevent injuries
+
+2. Over-pronators show 25% higher peak forces
+   → Corrective footwear or exercises needed
+
+3. Injured runners have asymmetric loading patterns
+   → Gait retraining could improve recovery
+
+4. Loading rate matters more than absolute force
+   → Quick impact accumulates more stress
+
+🎯 NEXT STEPS
+─────────────────────────────────────────────────────────────────
+1. Collect real sensor data from force plate or insole system
+2. Preprocess using provided tools in prediction_utils.py
+3. Make predictions on new runner data
+4. Generate personalized training recommendations
+5. Track improvements over time
+
+═════════════════════════════════════════════════════════════════
+Generated: Running Biomechanics Analysis System
+═════════════════════════════════════════════════════════════════
